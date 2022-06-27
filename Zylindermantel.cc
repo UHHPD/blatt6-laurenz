@@ -9,11 +9,11 @@ Zylindermantel::Zylindermantel(double nr, double nl) {
 }
 
 Vektor Zylindermantel::punkt() {
-  double R = r_;
+  double R = r_ ;
   double phi = 2 * M_PI * rand() / (double)RAND_MAX;
   double z = l_ * (rand() / (double)RAND_MAX - 0.5);
 
-  double x = 0;
-  double y = 0;
+  double x = cos(phi)*R;
+  double y = sin(phi)*R;
   return Vektor(x, y, z);
 };
